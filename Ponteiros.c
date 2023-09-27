@@ -13,3 +13,4 @@ printf("Variavel apontando para o endereco usando &vetor[0] : %x\nVariavel pveto
 //Teste
     return 0;
 }
+
