@@ -33,14 +33,24 @@ void Escrever(char *arquivo)
 
 }
 
-void Ler(char *arquivo)
+void Ler()
 {
-    
+    FILE *arquivo = fopen("C:/Users/20231stads005/Documents/Compilados em C/Ponteiros/B.txt", "r");
+    Pessoa a;
+    if (arquivo == NULL)
+    {
+        printf("Arquivo nao encontrado");
+    }
+    else {
+        while(fscanf(arquivo, "%s%s%s%s%s", a.nome, a.carro, a.cep, a.filme, a.animal)!= -1)
+        {
+            printf("%s\n%s\n%s\n%s\n%s", a.nome, a.carro, a.cep, a.filme, a.animal);
+        }
+    }
 }
 
 int main(void)
 {
-    FILE *arquivo = fopen("C:/Users/20231stads005/Documents/Compilados em C/Ponteiros/B.txt", "a");
-    Escrever(arquivo);
+    Ler();
     return 0;
 }
